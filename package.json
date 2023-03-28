@@ -1,0 +1,23 @@
+{
+  "name": "street-view-publish",
+  "version": "1.0.0",
+  "author": "Ryan Rubley",
+  "main": "./src/index.js",
+  "bin": {
+    "street-view-publish": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "node ./src/index.js",
+    "build": "npx pkg --targets node16-linux,node16-windows,node16-macos --compress Brotli ./package.json --out-path ./build"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.9",
+    "streetview-publish-client-libraries-v1": "^1.0.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
